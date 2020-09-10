@@ -38,8 +38,10 @@ export default {
 }
 .wrapper {
   .header {
-    height: 40px;
-    background: #ccc;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+    background: #354360;
     @include center();
   }
 }
