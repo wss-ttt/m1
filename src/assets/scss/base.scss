@@ -7,6 +7,9 @@ pre, form, fieldset, input, textarea, p, blockquote, th, td {
 html,body{
 	height: 100%;
 }
+body {
+    background: #f7fafe;
+}
 :focus { 
     outline: 0; 
 } 
