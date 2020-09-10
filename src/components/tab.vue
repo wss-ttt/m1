@@ -1,26 +1,19 @@
 <template>
   <div class="footer">
-    <div class="bar_parent" v-for="(menu,index) in deepMenu" :key="index">
-      <div class="footer_bar" @click="gotoAnotherPage(menu.routerUrl)">
-        <img
-          :src="menu.picUrl"
-          alt
-          style="width: 30%;margin-top: 4px;"
-          v-if="$route.path !== menu.routerUrl"
-        />
-        <img
-          :src="menu.activePicUrl"
-          style="width: 30%;margin-top: 4px;"
-          alt
-          v-if="$route.path === menu.routerUrl"
-        />
-        <p :class="$route.path === menu.routerUrl?'active_color':''">{{menu.name}}</p>
-      </div>
+    <div
+      v-for="(menu, index) in deepMenu"
+      :key="index"
+      class="f-item"
+      :class="$route.path === menu.routerUrl ? 'active' : '' "
+      @click="gotoAnotherPage(menu.routerUrl)"
+    >
+      <img :src="menu.picUrl" alt v-if="$route.path !== menu.routerUrl" />
+      <img :src="menu.activePicUrl" alt v-if="$route.path === menu.routerUrl" />
+      <p>{{menu.name}}</p>
     </div>
   </div>
 </template>
 <script>
-
 export default {
   data() {
     return {
@@ -63,6 +56,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer {
   position: fixed;
   bottom: 0;
@@ -83,39 +81,22 @@ export default {
   -moz-flex-wrap: nowrap;
   flex-wrap: nowrap;
   font-size: 14px;
-  .footer_bar {
-    width: 100%;
-    height: 100%;
-    text-align: center;
+
+  .f-item {
+    flex: 1;
+    @include center();
+    flex-direction: column;
+    color: #fff;
+    img {
+      width: 30%;
+    }
     p {
-      color: #ffffff;
-      width: 100%;
+      color: #fff;
     }
-    img {
-      width: 31px;
-      height: 27px;
-    }
-    .active_color {
-      color: #13d2d9;
-    }
-  }
-
-  .bar_parent {
-    width: 25%;
-    height: 50px;
-  }
-
-  .middle_bar {
-    text-align: center;
-    line-height: 50px;
-
-    img {
-      line-height: 50px;
-      vertical-align: middle;
-      width: auto;
-      margin: 0;
-
-      height: 68%;
+    &.active {
+      p {
+        color: #13d2d9;
+      }
     }
   }
 }
