@@ -37,6 +37,16 @@ export default new Router({
         name: 'personal',
         component: resovle => require(['@/views/home/personal.vue'], resovle),
       }]
+    },
+    {
+      path: '/firstpage/order_system',
+      name: 'order_system',
+      component: resovle => require(['@/views/firstpage/order_system.vue'], resovle),
+    },
+    {
+      path: '/firstpage/dealer',
+      name: 'dealer',
+      component: resovle => require(['@/views/firstpage/dealer.vue'], resovle),
     }
   ]
 })
