@@ -44,5 +44,8 @@ export default {
     background: #354360;
     @include center();
   }
+  .content {
+    padding-bottom: 60px;
+  }
 }
 </style>
