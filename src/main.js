@@ -18,7 +18,9 @@ import "mint-ui/lib/style.css"; // 引入样式
 import "amfe-flexible/index.js";
 Vue.use(MintUI);
 import VHeader from '@/components/header.vue'
+import ListCell from '@/components/list-cell.vue'
 Vue.component('VHeader', VHeader)
+Vue.component('ListCell', ListCell)
 
 
 Vue.config.productionTip = false;
