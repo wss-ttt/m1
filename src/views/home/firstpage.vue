@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="firstpage">
     <div class="info">
       <el-row class="mint-cell" v-for="(item, index) in list" :key="index">
         <el-col :span="12">
@@ -154,7 +154,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.wrapper {
+.firstpage {
   font-size: 14px;
   .mint-cell {
     padding: 0 15px;
