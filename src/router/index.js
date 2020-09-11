@@ -97,6 +97,46 @@ export default new Router({
         title: '客户列表'
       },
       component: resovle => require(["@/views/client/client_list.vue"], resovle)
+    },
+    {
+      path: '/person/changeaddr',
+      name: 'changeaddr',
+      meta: {
+        title: '修改地址'
+      },
+      component: resovle => require(["@/views/person/changeaddr"], resovle)
+    },
+    {
+      path: '/person/changephonenum',
+      name: 'changephonenum',
+      meta: {
+        title: '修改手机号'
+      },
+      component: resovle => require(["@/views/person/changephonenum"], resovle)
+    },
+    {
+      path: '/person/updatepassword',
+      name: 'updatepassword',
+      meta: {
+        title: '修改密码'
+      },
+      component: resovle => require(["@/views/person/updatepassword"], resovle)
+    },
+    {
+      path: '/person/showidentity',
+      name: 'showidentity',
+      meta: {
+        title: '身份证正反面'
+      },
+      component: resovle => require(["@/views/person/showidentity"], resovle)
+    },
+    {
+      path: '/login',
+      name: 'login',
+      meta: {
+        title: '登录',
+      },
+      component: resovle => require(["@/views/user/login"], resovle)
     }
   ]
 });
