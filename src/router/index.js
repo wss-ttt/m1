@@ -32,11 +32,17 @@ export default new Router({
         {
           path: "firstpage",
           name: "firstpage",
+          meta: {
+            title: '首页'
+          },
           component: resovle => require(["@/views/home/firstpage.vue"], resovle)
         },
         {
           path: "order",
           name: "order",
+          meta: {
+            title: ''
+          },
           component: resovle => require(["@/views/home/order.vue"], resovle)
         },
         {
@@ -54,13 +60,43 @@ export default new Router({
     {
       path: "/firstpage/order_system",
       name: "order_system",
+      meta: {
+        title: '订单系统'
+      },
       component: resovle =>
         require(["@/views/firstpage/order_system.vue"], resovle)
     },
     {
       path: "/firstpage/dealer",
       name: "dealer",
+      meta: {
+        title: '我的经销商'
+      },
       component: resovle => require(["@/views/firstpage/dealer.vue"], resovle)
+    },
+    {
+      path: '/client/client',
+      name: 'client',
+      meta: {
+        title: '我的客户'
+      },
+      component: resovle => require(["@/views/client/client.vue"], resovle)
+    },
+    {
+      path: '/client/add_client',
+      name: 'add_client',
+      meta: {
+        title: '添加客户'
+      },
+      component: resovle => require(["@/views/client/add_client.vue"], resovle)
+    },
+    {
+      path: '/client/client_list',
+      name: 'client_list',
+      meta: {
+        title: '客户列表'
+      },
+      component: resovle => require(["@/views/client/client_list.vue"], resovle)
     }
   ]
 });
