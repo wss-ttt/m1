@@ -20,7 +20,7 @@
 
     <ul class="menu">
       <li v-for="(item, index) in menus" :key="index" class="m-item">
-        <router-link to="">
+        <router-link :to="item.path">
           <div class="pic">
             <img :src="item.url" alt/>
           </div>
@@ -75,7 +75,7 @@ export default {
         {
           url: require('../../assets/images/dj.png'),
           title: '订单系统',
-          path: '/firstpage/order_systerm'
+          path: '/firstpage/order_system'
         },
         {
           url: require('../../assets/images/myjxs.png'),
