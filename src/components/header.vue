@@ -17,11 +17,14 @@ export default {
     return {}
   },
   computed: {
-    ...mapState(['pageTitle'])
+    ...mapState({
+      pageTitle: state => state.common.pageTitle
+    })
   },
   watch: {},
   created() {},
-  mounted() {},
+  mounted() {
+  },
   activated() {},
   deactivated() {},
   updated() {},
@@ -30,5 +33,10 @@ export default {
   filters: {}
 }
 </script>
-<style scoped>
+<style lang="scss">
+.header {
+  .mint-header-title {
+    font-size: 18px;
+  }
+}
 </style>
