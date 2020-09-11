@@ -24,6 +24,13 @@ export default new Router({
       component: resovle => require(["@/views/home/home.vue"], resovle),
       children: [
         {
+          path: '/',
+          redirect: {
+            // 添加重定向
+            name: 'firstname'
+          }
+        },
+        {
           path: "firstpage",
           name: "firstname",
           component: resovle => require(["@/views/home/firstpage.vue"], resovle)
