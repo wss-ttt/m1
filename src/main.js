@@ -17,6 +17,10 @@ import "mint-ui/lib/style.css"; // 引入样式
 // rem h5 适配
 import "amfe-flexible/index.js";
 Vue.use(MintUI);
+import VHeader from '@/components/header.vue'
+Vue.component('VHeader', VHeader)
+
+
 Vue.config.productionTip = false;
 // 全局挂载
 Vue.prototype.$http = request;
