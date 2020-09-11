@@ -37,6 +37,8 @@ export default {
   align-items: center;
 }
 .wrapper {
+  height: 100%;
+  
   .header {
     height: 50px;
     font-size: 18px;
@@ -45,7 +47,8 @@ export default {
     @include center();
   }
   .content {
-    padding-bottom: 60px;
+    height: calc(100% - 50px - 55px);
+    overflow: auto;
   }
 }
 </style>
