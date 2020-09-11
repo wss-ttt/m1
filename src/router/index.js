@@ -10,7 +10,7 @@ export default new Router({
       path: "/",
       // 添加重定向
       redirect: {
-        name: "firstname"
+        name: "firstpage"
       }
     },
     {
@@ -27,12 +27,12 @@ export default new Router({
           path: '/',
           redirect: {
             // 添加重定向
-            name: 'firstname'
+            name: 'firstpage'
           }
         },
         {
           path: "firstpage",
-          name: "firstname",
+          name: "firstpage",
           component: resovle => require(["@/views/home/firstpage.vue"], resovle)
         },
         {
