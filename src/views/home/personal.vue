@@ -10,8 +10,8 @@
     <mt-cell title="详细地址" :value="myData.addr" is-link to="/person/changeaddr"></mt-cell>
     <mt-cell title="证件号码" :value="myData.id_card" style="border-bottom: 5px solid #f7fafe;"></mt-cell>
     <mt-cell title="手机号码" :value="myData.tel" is-link to="/person/changephonenum"></mt-cell>
-    <mt-cell title="修改密码" is-link to="/person/Forgetpassword"></mt-cell>
-    <mt-cell title="身份证照片" is-link to="/person/Showidentity"></mt-cell>
+    <mt-cell title="修改密码" is-link to="/person/updatepassword"></mt-cell>
+    <mt-cell title="身份证照片" is-link to="/person/showidentity"></mt-cell>
     <div style="width: 100%;height: 5px;background: #f6f6f6;"></div>
     <mt-cell title="退出登录" is-link to="/login"></mt-cell>
     <div style="width: 100%;height: 5px;background: #f6f6f6;"></div>
