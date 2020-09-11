@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="order">
     <ul
       v-infinite-scroll="loadMore"
       infinite-scroll-disabled="loading"
@@ -46,7 +46,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.wrapper {
+.order {
   // background: #fb3;
   overflow: auto;
   height: 100%;
