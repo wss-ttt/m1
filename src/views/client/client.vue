@@ -2,8 +2,11 @@
   <div class="wrapper">
     <v-header />
     <div class="content">
-      <mt-cell title="添加客户" is-link to="/client/add_client"></mt-cell>
-      <mt-cell title="客户列表" is-link to="/client/client_list"></mt-cell>
+      <!-- <mt-cell title="添加客户" is-link to="/client/add_client"></mt-cell> -->
+      <!-- <mt-cell title="客户列表" is-link to="/client/client_list"></mt-cell> -->
+
+      <list-cell title="添加客户" @click="toUrl('/client/add_client')"></list-cell>
+      <list-cell title="客户列表" @click="toUrl('/client/client_list')"></list-cell>
     </div>
   </div>
 </template>
@@ -27,7 +30,13 @@ export default {
   deactivated() {},
   updated() {},
   destroyed() {},
-  methods: {},
+  methods: {
+    toUrl(url) {
+      this.$router.push({
+        path: url
+      })
+    }
+  },
   filters: {}
 }
 </script>
