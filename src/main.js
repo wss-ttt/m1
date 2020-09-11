@@ -19,6 +19,7 @@ import "amfe-flexible/index.js";
 Vue.use(MintUI);
 import VHeader from '@/components/header.vue'
 import ListCell from '@/components/list-cell.vue'
+import '@/utils/appback.js'
 Vue.component('VHeader', VHeader)
 Vue.component('ListCell', ListCell)
 
